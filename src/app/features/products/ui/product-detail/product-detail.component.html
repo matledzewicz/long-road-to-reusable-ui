@@ -1,0 +1,16 @@
+@if (product$ | async; as product) {
+<div class="card">
+  <div class="card-header">
+    {{ product.title }}
+  </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p>{{ product.description }}</p>
+
+    </blockquote>
+    <img [src]="product.image"
+         class="card-img-top"
+         [alt]="product.title">
+  </div>
+</div>
+}

@@ -1,0 +1,13 @@
+<app-filters-container (onSubmit)=""
+                       (onFilterChaned)="">
+  <app-enum-filters [data]="[]"
+                    appReactOnFilterChanges
+                    *appFilterTab="'label name'">
+    <app-custom-filters [data]="[]"
+                        appReactOnFilterChanges
+                        *appFilterTab="'label name'">
+
+  </app-enum-filters>
+</app-filters-container>
+
+<!-- ContentChildren -->

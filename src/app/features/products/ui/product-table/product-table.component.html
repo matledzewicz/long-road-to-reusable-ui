@@ -1,0 +1,31 @@
+<table cdk-table
+       [dataSource]="datasource">
+
+  <ng-container cdkColumnDef="id">
+    <th cdk-header-cell
+        *cdkHeaderCellDef> No. </th>
+    <td cdk-cell
+        *cdkCellDef="let element"> {{element.id}} </td>
+  </ng-container>
+
+
+  <ng-container cdkColumnDef="title">
+    <th cdk-header-cell
+        *cdkHeaderCellDef> Title </th>
+    <td cdk-cell
+        *cdkCellDef="let element"> {{element.title}} </td>
+  </ng-container>
+
+
+  <ng-container cdkColumnDef="category">
+    <th cdk-header-cell
+        *cdkHeaderCellDef> Category </th>
+    <td cdk-cell
+        *cdkCellDef="let element"> {{element.category}} </td>
+  </ng-container>
+
+  <tr cdk-header-row
+      *cdkHeaderRowDef="displayedColumns"></tr>
+  <tr cdk-row
+      *cdkRowDef="let row; columns: displayedColumns;"></tr>
+</table>
